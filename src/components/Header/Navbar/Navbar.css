@@ -1,0 +1,13 @@
+nav a{
+    padding: 8px 15px;
+    font-weight: 500;
+    color: #0B0B0B;
+
+}
+nav a.active{
+    background-color: aquamarine;
+    border-radius: 10px;
+    text-decoration: underline;
+    color:#FF444A
+    
+}

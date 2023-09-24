@@ -1,5 +1,5 @@
 
-const Donations = () => {
+const DonationPage = () => {
     return (
         <div className="flex justify-center items-center ">
            <h2 className="text-center"> Donation Page</h2>
@@ -7,4 +7,4 @@ const Donations = () => {
     );
 };
 
-export default Donations;
+export default DonationPage;

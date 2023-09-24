@@ -1,5 +1,5 @@
 
-const Statistics = () => {
+const StatisticsPage = () => {
     return (
         <div className="flex justify-center items-center ">
             <h2 className="text-center">Statistics Page</h2>
@@ -7,4 +7,4 @@ const Statistics = () => {
     );
 };
 
-export default Statistics;
+export default StatisticsPage;

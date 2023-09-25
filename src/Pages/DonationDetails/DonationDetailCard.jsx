@@ -22,12 +22,12 @@ const DonationDetailCard = ({ donation }) => {
                 addedDonateArray.push(...donateItems, donation);
                 localStorage.setItem('donation', JSON.stringify(addedDonateArray))
                 Swal.fire(
-                    'Good Job!',
-                    'Donated successfully!',
+                    'Thank You!',
+                    "You're Donated successfully!",
                     'success');
             } else {
                 Swal.fire(
-                    'Error!', 'Duplicate not allowed', 'error');
+                    'Denied!', "You're already donated for this! Try another donation", 'error');
 
             }
         }

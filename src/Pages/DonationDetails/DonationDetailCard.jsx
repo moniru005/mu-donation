@@ -4,8 +4,33 @@ const DonationDetailCard = ({ donation }) => {
 
     const { id, title, image, button_bg, description, price } = donation || {};
 
-    const handleDonate = () =>{
-        
+    const handleDonate = () => {
+        const addedDonateArray = [];
+        const donateItems = JSON.parse(localStorage.getItem('donation'));
+        if (!donateItems) {
+            addedDonateArray.push(donation);
+            localStorage.setItem('donation', JSON.stringify(addedDonateArray))
+            Swal.fire(
+                'Good Job!',
+                'Donated successfully!',
+                'success');
+
+        } else {
+            const isExist = donateItems?.find(donate => donate.id === id)
+
+            if (!isExist) {
+                addedDonateArray.push(...donateItems, donation);
+                localStorage.setItem('donation', JSON.stringify(addedDonateArray))
+                Swal.fire(
+                    'Good Job!',
+                    'Donated successfully!',
+                    'success');
+            } else {
+                Swal.fire(
+                    'Error!', 'Duplicate not allowed', 'error');
+
+            }
+        }
     }
 
 
@@ -18,12 +43,12 @@ const DonationDetailCard = ({ donation }) => {
                     alt="image"
                 />
                 <div className="bg-black h-16 md:h-32 lg:h-32 rounded-b-lg absolute bottom-0 z-10  w-full opacity-50">
+                </div>
+                <button
+                    onClick={handleDonate}
+                    className="absolute bottom-3.5 left-5 md:bottom-10 md:left-10 lg:bottom-10 lg:left-10 z-20 px-2 py-1 md:px-4 md:py-3 lg:px-4 lg:py-3 rounded text-lg md:text-xl lg:text-xl text-white font-semibold font-sans" style={{ backgroundColor: button_bg }}>Donate ${price} </button>
             </div>
-            <button 
-            onClick={handleDonate}
-            className="absolute bottom-3.5 left-5 md:bottom-10 md:left-10 lg:bottom-10 lg:left-10 z-20 px-2 py-1 md:px-4 md:py-3 lg:px-4 lg:py-3 rounded text-lg md:text-xl lg:text-xl text-white font-semibold font-sans" style={{backgroundColor:button_bg}}>Donate {price} </button>
-            </div>
-            
+
 
             <div className="mt-14">
                 <h6 className="mb-4 block  text-2xl font-bold text-[#0B0B0B]">

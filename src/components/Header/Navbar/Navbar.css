@@ -2,11 +2,12 @@ nav a{
     padding: 8px 15px;
     font-weight: 500;
     color: #0B0B0B;
+    font-size: 18px;
 
 }
 nav a.active{
-    background-color: aquamarine;
-    border-radius: 10px;
+    background-color: #ff444a26;
+    border-radius: 5px;
     text-decoration: underline;
     color:#FF444A
     

@@ -4,7 +4,7 @@ const DonationsCard = ({ donation }) => {
     const {id, title, category, image, category_bg, card_bg, text_color } = donation || {};
 
     
-    return (
+    return (    
         <>
         <Link to={`/donations/${id}`}>
         <div className={`relative flex max-w-[24rem] flex-col rounded-xl bg-clip-border text-gray-700 shadow-md bgColor`} style={{backgroundColor:card_bg}}>

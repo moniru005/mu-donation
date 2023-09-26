@@ -48,7 +48,7 @@ const DonationPage = () => {
 
     return (
         <div className="">
-
+            
             {
                 noFound ? <p className="flex justify-center items-center text-3xl font-sans"> {noFound} </p>
                     :
@@ -56,18 +56,21 @@ const DonationPage = () => {
                         <h1 className="mb-10 text-center text-gray-700 text-xl font-semibold">Total {donated.length} Donation here </h1>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 place-items-center md:px-32 lg:px-32">
                             {
-                                isShowAll ? donated?.map(donate => <DonatedItems key={donate.id} donate={donate}></DonatedItems>) :
-                                    donated?.slice(0, 4).map(donate => <DonatedItems key={donate.id} donate={donate}></DonatedItems>)
+                                isShowAll ? 
+                                donated?.map(donate => <DonatedItems key={donate.id} donate={donate}></DonatedItems>) 
+                                :    
+                                donated?.slice(0, 4).map(donate => <DonatedItems key={donate.id} donate={donate}></DonatedItems>)
                             }
                         </div>
 
                         <div className="flex gap-4 py-10 justify-center ">
                             <div>
                                 {
-                                    donated.length > 4 && <button
+                                    donated.length > 4 &&  <button
                                         onClick={() => setIsShowAll(!isShowAll)}
-                                        className="py-2 px-3 rounded-lg flex items-center justify-center mx-auto bg-[#009444] hover:bg-[#4aad6bfd] text-white hover:text-white">
-                                        {isShowAll ? 'Show Less' : 'Show All'}
+                                        className={`py-2 px-3 rounded-lg flex items-center justify-center mx-auto ${isShowAll? 'bg-white' : 'bg-[#009444]'} ${isShowAll? 'bg-white' : 'hover:bg-[#4aad6bfd]'} text-white hover:text-white`}>
+                                        {isShowAll ? '' : 'Show All'}
+                                        
                                     </button>
                                 }
                             </div>

@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2';
+import PropTypes from 'prop-types';
 
 const DonationDetailCard = ({ donation }) => {
 
@@ -65,4 +66,7 @@ const DonationDetailCard = ({ donation }) => {
     );
 };
 
+DonationDetailCard.propTypes = {
+    donation: PropTypes.object
+}
 export default DonationDetailCard;

@@ -1,8 +1,74 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Title: Donation Campaign
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Project Features
+
+Certainly, here are few important project features for Donation Campaign:
+
+#### User Interaction:: 
+Ensure that users can easily access to the all Donation Cards from the homepage to a dedicated section of the application.
+  
+
+#### User Interface (UI) Design:
+- Design the donation cards: Create a visually appealing card for each donation item or campaign. Include essential information such as the donation title, image, category and a details.
+
+- Design the donation details view: Create a separate page or window where users can view the detailed information about a donation when they click the donation card in the homepage.
+- Design a statistics page: Create a separate statistics page where the pie chart will be displayed to the donated items and total donation items as percentage. 
+
+#### Functionality:
+   - Implement a click event handler for each donation card. When a user clicks on a card, it should trigger an action to display the donation details.
+
+- When a user clicks the "Show All" button, the application will trigger a process to retrieve and display all the donated cards or items in a single, scrollable list.
+
+- Filtering and Sorting: Allow users to filter and sort search results based on categories.
+
+#### Testing:
+Thoroughly test the functionality to ensure that all donated cards are displayed accurately.
+
+#### Responsiveness:
+Make the user interface responsive to various screen sizes and devices.
+
+*These features should help improve the user experience.*
+
+
+
+## Installation on this project
+
+Install Tailwind CSS with Vite
+```bash
+    npm create vite@latest my-project -- --template react
+    cd my-project
+```
+```bash
+    npm install -D tailwindcss postcss autoprefixer
+    npx tailwindcss init -p
+```
+Install PropTypes for prop validation
+```bash
+    npm install --save prop-types
+```
+Install sweetalert2 for showing beautiful messages
+```bash
+    npm install sweetalert2
+```
+Install React Icons
+```bash
+    npm install react-icons --save
+```
+
+## Importing on this project
+
+Import for PropTypes validtion
+```bash
+    import PropTypes from 'prop-types'; // ES6
+```
+Import for Icons in sweetalert2
+```bash
+    import Swal from 'sweetalert2'
+```
+Import for React Icons
+```bash
+    import { BsBook } from 'react-icons/bs';
+```

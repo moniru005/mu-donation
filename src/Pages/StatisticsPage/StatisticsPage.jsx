@@ -1,8 +1,12 @@
+import { useLoaderData } from "react-router-dom";
+import DonationChart from "../../components/PieComponent/DonationChart";
 
 const StatisticsPage = () => {
+    const donations = useLoaderData();
     return (
-        <div className="flex justify-center items-center ">
-            <h2 className="text-center">Statistics Page</h2>
+        <div>
+                <DonationChart donations={donations}></DonationChart>
+
         </div>
     );
 };

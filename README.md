@@ -36,11 +36,13 @@ Make the user interface responsive to various screen sizes and devices.
 
 ## Installation on this project
 
-Install Tailwind CSS with Vite
+Install Project & React Router DOM
 ```bash
     npm create vite@latest my-project -- --template react
     cd my-project
-```
+    npm install react-router-dom localforage match-sorter sort-by
+````
+Install Tailwind CSS with Vite
 ```bash
     npm install -D tailwindcss postcss autoprefixer
     npx tailwindcss init -p
@@ -53,9 +55,9 @@ Install sweetalert2 for showing beautiful messages
 ```bash
     npm install sweetalert2
 ```
-Install React Icons
+Install Apex Charts
 ```bash
-    npm install react-icons --save
+    npm install apexcharts --save
 ```
 
 ## Importing on this project
@@ -68,7 +70,14 @@ Import for Icons in sweetalert2
 ```bash
     import Swal from 'sweetalert2'
 ```
-Import for React Icons
+Import for Appex Charts
 ```bash
-    import { BsBook } from 'react-icons/bs';
+    import ApexCharts from 'apexcharts';
 ```
+
+
+
+
+### Project Created By:
+Md. Monir Uddin
+

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import PiChart from "./PiChart";
+import PropTypes from 'prop-types';
 
 const DonationChart = ({ donations }) => {
 
@@ -17,6 +18,7 @@ const DonationChart = ({ donations }) => {
 
     return (
         <div className="w-screen">
+            
             <PiChart 
             totalDonations={totalDonations}
             donated={donated}
@@ -26,4 +28,8 @@ const DonationChart = ({ donations }) => {
     );
 };
 
+DonationChart.propTypes = {
+    donations: PropTypes.array
+    
+  }
 export default DonationChart;

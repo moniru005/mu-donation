@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import DonatedItems from "./DonatedItems";
 import Swal from 'sweetalert2';
+import { TiArrowBack } from 'react-icons/ti';
+import { Link } from "react-router-dom";
 
 
 const DonationPage = () => {
@@ -46,31 +48,43 @@ const DonationPage = () => {
 
     }
 
+
     return (
         <div className="">
-            
+
             {
-                noFound ? <p className="flex justify-center items-center text-3xl font-sans"> {noFound} </p>
+                noFound ? 
+                <div className="flex flex-col gap-2 justify-center items-center pt-28">
+                    <h1 className="text-4xl font-semibold">{noFound}</h1>
+                    <Link to="/">
+                        <button className="btn pr-5 mt-6">
+                            <TiArrowBack className='text-2xl'></TiArrowBack>
+                            Back to Home
+                        </button>
+                    </Link>
+                </div>
+
                     :
+
                     <div>
                         <h1 className="mb-10 text-center text-gray-700 text-xl font-semibold">Total {donated.length} Donation here </h1>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 place-items-center md:px-32 lg:px-32">
                             {
-                                isShowAll ? 
-                                donated?.map(donate => <DonatedItems key={donate.id} donate={donate}></DonatedItems>) 
-                                :    
-                                donated?.slice(0, 4).map(donate => <DonatedItems key={donate.id} donate={donate}></DonatedItems>)
+                                isShowAll ?
+                                    donated?.map(donate => <DonatedItems key={donate.id} donate={donate}></DonatedItems>)
+                                    :
+                                    donated?.slice(0, 4).map(donate => <DonatedItems key={donate.id} donate={donate}></DonatedItems>)
                             }
                         </div>
 
                         <div className="flex gap-4 py-10 justify-center ">
                             <div>
                                 {
-                                    donated.length > 4 &&  <button
+                                    donated.length > 4 && <button
                                         onClick={() => setIsShowAll(!isShowAll)}
-                                        className={`py-2 px-3 rounded-lg flex items-center justify-center mx-auto ${isShowAll? 'bg-white' : 'bg-[#009444]'} ${isShowAll? 'bg-white' : 'hover:bg-[#4aad6bfd]'} text-white hover:text-white`}>
+                                        className={`py-2 px-3 rounded-lg flex items-center justify-center mx-auto ${isShowAll ? 'bg-white' : 'bg-[#009444]'} ${isShowAll ? 'bg-white' : 'hover:bg-[#4aad6bfd]'} text-white hover:text-white`}>
                                         {isShowAll ? '' : 'Show All'}
-                                        
+
                                     </button>
                                 }
                             </div>

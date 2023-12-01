@@ -1,4 +1,6 @@
+/* eslint-disable react/prop-types */
 import Chart from "react-apexcharts";
+
 
 const PiChart = ({ totalDonations,  donated }) => {
     // console.log(totalDonations,  donated)
@@ -29,8 +31,7 @@ const PiChart = ({ totalDonations,  donated }) => {
                     }
                   }],
                   
-            }}>
-                
+            }}> 
             </Chart>
 
             <div className="mt-6 flex gap-6">
@@ -42,10 +43,12 @@ const PiChart = ({ totalDonations,  donated }) => {
                     <p className="text-sm">Total Donation</p>
                     <div className="w-20 h-2 bg-[#FF444A]"></div>
                 </div>
-
             </div>
+            
         </div>
     );
 };
+
+
 
 export default PiChart;

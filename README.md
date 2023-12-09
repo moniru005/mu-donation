@@ -1,7 +1,10 @@
 
-# Project Title: Donation Campaign
+# Project Title: Employee Management
 
 
+#### Project Links:
+
+- Live Link: https://brilliant-donation-campaign.netlify.app/
 
 ## Project Features
 
@@ -31,12 +34,16 @@ Thoroughly test the functionality to ensure that all donated cards are displayed
 Make the user interface responsive to various screen sizes and devices.
 
 *These features should help improve the user experience.*
+## Tech Stack
+
+**Client:** React, React Router, TailwindCSS, DaisyUI
 
 
 
-## Installation on this project
+## Installation
 
-Install Project & React Router DOM
+
+Install my Project with NPM & React Router DOM
 ```bash
     npm create vite@latest my-project -- --template react
     cd my-project
@@ -55,10 +62,9 @@ Install sweetalert2 for showing beautiful messages
 ```bash
     npm install sweetalert2
 ```
-Install Apex Charts
-```bash
-    npm install apexcharts --save
-```
+
+
+
 
 ## Importing on this project
 
@@ -70,14 +76,8 @@ Import for Icons in sweetalert2
 ```bash
     import Swal from 'sweetalert2'
 ```
-Import for Appex Charts
-```bash
-    import ApexCharts from 'apexcharts';
-```
 
+## Created By
 
-
-
-### Project Created By:
-Md. Monir Uddin
+*---Md. Monir Uddin*
 
